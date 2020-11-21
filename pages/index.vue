@@ -57,36 +57,21 @@ export default Vue.extend({
   },
   data() {
     return {
-      projects: [
-        {
-          title: "Snake",
-          description: "Snake game written on pure JS using table element as display",
-          stack: ['html','css','js'],
-          thumbnail: "https://placehold.it/200x100/14C027/FFF/?text=Snake"
-        },
-        {
-          title: "Wedding",
-          description: "Wedding invitation with customisable header text",
-          stack: ['html','css','js','bootstrap'],
-          thumbnail: "https://placehold.it/200x100/FFF/00DA18?text=Wedding"
-        },
-        {
-          title: "Simple Assistant",
-          description: "Automation plugin for SimpleMMO Web-browser game",
-          stack: ['ts','vue','webpack'],
-          thumbnail: "https://placehold.it/200x100/0404B4/FF0?text=Simple%20Assistant"
-        },
-        {
-          title: "Raider",
-          description: "Clone of Dungeon Raid",
-          stack: ['ts','vue', 'konva'],
-          thumbnail: "https://placehold.it/200x100/000/F00?text=Raider"
-        },
-      ] as IItem[]
+      projects: undefined
     }
   },
-  async asyncData() {
-    // fetch $content here
+  async asyncData({ $axios }) {
+    let content = await $axios.$get(`http://localhost:${location.port}/_content`);
+    const projects: IItem[] = [];
+    content.forEach((entry: any) => {
+      projects.push({
+        title: entry.title,
+        description: entry.description,
+        stack: entry.stack,
+        thumbnail: entry.thumbnail
+      })
+    })
+    return { projects }
   }
 })
 </script>
