@@ -1,0 +1,451 @@
+@font-face {
+  font-family: 'Caveat Regular';
+  src: url('fonts/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+small {
+  //font-family: 'Caveat Regular';
+  font-size: 120% !important;
+}
+
+//h2 {
+//  font-family: Lobster;
+//}
+//
+//h4 {
+//  font-family: Pacifico;
+//}
+
+p, li {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+//
+
+html, body {
+  font-size: 125%;
+  height: 100%;
+  @media (min-width: 1200px) {
+    font-size: 175%;
+  }
+}
+
+body > section, body > section > .row {
+  min-height: 85vh;
+}
+
+body > section:nth-of-type(1), body > section:nth-of-type(1) > .row {
+  min-height: 100vh;
+}
+
+body > .bumper {
+  background-image: url("../src/img/bumper.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 15vh;
+  margin: 10vh 0;
+}
+
+body:before {
+  content: '';
+  display: block;
+  background-image: url("../src/img/bumper-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  height: 20vh;
+  width: 90vw;
+  margin-bottom: -5vh;
+  margin-left: 5vw;
+}
+
+body:after {
+  content: '';
+  display: block;
+  background-image: url("../src/img/bumper-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20vh;
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.container {
+  background-color: rgba(255,255,255,0.5);
+}
+
+/*
+body > section:nth-of-type(2n) {
+   background-color: skyblue;
+}
+
+body > section:nth-of-type(2n-1) {
+  background-color: silver;
+}
+*/
+
+#name__breaker:before, #name__breaker:after {
+  content: '';
+  display: inline-block;
+  width: 25vw;
+  color: rgba(255,255,255,0);
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+}
+
+#head {
+  #head__date {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    #head__date-time {
+      span {
+        display: inline-block;
+      }
+      span:nth-of-type(2) {
+        font-size: 50%;
+        vertical-align: top;
+        height: 2rem;
+      }
+    }
+
+    #head__date-mid {
+      p:nth-of-type(1) {
+        margin-bottom: -0.5rem;
+      }
+      p:nth-of-type(3) {
+        margin-top: -0.5rem;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    div:nth-of-type(1), div:nth-of-type(3) {
+      width: 5rem;
+    }
+
+    div:nth-of-type(1) {
+      text-align: right;
+    }
+
+    div:nth-of-type(3) {
+      text-align: left;
+    }
+
+    p:nth-of-type(2) {
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      margin: 0 1rem;
+      padding: 0 1rem;
+    }
+  }
+}
+
+#get-to {
+  i {
+    font-size: 400%;
+  }
+  @media (min-width: 576px) {
+    .get-to__text {
+      font-size: 75%;
+    }
+  }
+}
+
+#plan {
+  ul {
+    li {
+      * {
+        display: inline-block;
+      }
+      display: flex;
+      flex-flow: row;
+      time {
+        order: 1;
+        width: 100%;
+      }
+      time:after {
+        content: '';
+        display: block;
+        position: relative;
+        top: -2rem;
+        height: 100%;
+        margin-left: 65%;
+        //margin-bottom: -50%;
+        border-left: 3px solid black;
+      }
+      .text {
+        order: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        object {
+          order: 2;
+          max-height: 10vh;
+          max-width: 10vw;
+        }
+        p {
+          order: 1;
+          margin-bottom: 0;
+        }
+      }
+      .text:before {
+        content: '';
+        display: block;
+        width: 1rem;
+        position: relative;
+        left: -40%;
+        top: 1rem;
+        margin-top: -0.5rem;
+        border-bottom: 3px solid black;
+      }
+    }
+    list-style: none;
+    padding-left: 0;
+    margin: 0 1rem;
+  }
+
+  @media (min-width: 576px) {
+    ul {
+      text-align: center;
+      margin-top: 2rem;
+      margin-left: -1rem;
+      display: flex;
+      flex-flow: row;
+      flex-wrap: nowrap;
+      text-overflow: clip;
+      li {
+        display: inline-block;
+        .text {
+          display: inline-block;
+          font-size: .75rem;
+          max-width: 6rem;
+          max-height: 6rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          p {
+            min-height: 2rem;
+            min-width: 3.5rem;
+          }
+          object {
+            max-width: 4rem;
+            max-height: 4rem;
+            //display: none;
+          }
+        }
+        time {
+          display: block;
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+        .text:after {
+          content: '';
+          display: block;
+          position: relative;
+          top: 0.5rem;
+          width: 150%;
+          margin-left: -25%;
+          border-bottom: 3px solid black;
+        }
+        .text:before {
+          border-bottom: none;
+        }
+        time:before {
+          content: '';
+          display: block;
+          width: 0.25rem;
+          height: 1rem;
+          position: relative;
+          left: 50%;
+          top: 0.25rem;
+          margin-top: -0.5rem;
+          border-left: 3px solid black;
+        }
+      }
+    }
+  }
+}
+
+#wear {
+  li {
+    text-align: left;
+  }
+  .wear__dress {
+    max-height: 25vh;
+    max-width: 25vw;
+  }.wear__suit {
+     max-height: 20vh;
+     max-width: 20vw;
+   }
+  .palette {
+    width: 75vw;
+    height: 10vh;
+  }
+
+  @media (min-width: 576px) {
+    .palette {
+      width: 50vw;
+    }
+    .wear__dress {
+      transform:translate(0%, 50%);
+    }
+  }
+}
+
+#gift {
+  //.col-6 {
+  //  max-height: 5rem;
+  //}
+  overflow: hidden;
+  object {
+    display: inline-block;
+    height: 55%;
+    width: 55%;
+  }
+  .cross:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 150%;
+    transform: rotate(45deg);
+    border-bottom: 2px solid black;
+    outline: 2px solid white;
+    top: -1.5rem;
+    left: -0.4rem;
+  }
+  p {
+    font-size: 100%;
+  }
+  .gift__bad > p {
+    font-size: 50%;
+  }
+  .gift__bad {
+    object {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .gift__10 {
+    object {
+      height: 100px;
+    }
+  }
+
+  @media (min-width: 576px) {
+    p {
+      font-size: 100%;
+    }
+    object {
+      height: 65%;
+      width: 65%;
+    }
+    .gift__1, .gift__2 > p {
+      text-align: center !important;
+    }
+    .gift__1 {
+      order: 1;
+    }
+    .gift__2 {
+      order: 2;
+      margin-top: -2rem;
+      margin-bottom: 1rem;
+    }
+    .gift__bad {
+      order: 3;
+      p {
+        font-size: 70%;
+      }
+      object {
+        height: 45%;
+        width: 45%;
+      }
+    }
+    .cross:after {
+      top: -2rem;
+      left: 1rem;
+      width: 75%;
+      border-bottom: 5px solid black;
+      outline: 5px solid white;
+    }
+    .gift__10 {
+      object {
+        height: 50%;
+      }
+      object:first-of-type {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+#contact {
+  min-height: initial;
+  .row {
+    min-height: initial;
+  }
+  i {
+    font-size: 300%;
+    margin: 2rem 0;
+  }
+}
+
+//@media (min-width: 576px) {}
+
+// fuck me
+
+* {
+  h2 { // заголовок
+    font-family: 'Cormorant Infant', serif;
+  }
+  h4, small { // подзаголовок
+    font-family: 'Cormorant Infant', serif;
+  }
+  p, li { // основной текст
+    font-family: 'Poiret One', cursive;
+  }
+  //
+  #head__greet {
+    font-family: 'Poiret One', cursive;
+    font-size: 125%;
+    #head__greet-name {
+      font-family: 'Cormorant Infant', serif;
+    }
+  }
+  #head__names {
+    * {
+      font-family: 'Cormorant Infant', serif;
+      font-size: 250%;
+    }
+    #name__breaker {
+      margin-top: -1rem;
+      margin-bottom: -1rem;
+    }
+  }
+  #head__date {
+    * {
+      font-family: 'Lora', serif;
+    }
+  }
+  #head__place {
+    font-family: 'Lora', serif;
+  }
+  #head__footer {
+    * {
+      font-family: 'Poiret One', cursive;
+    }
+  }
+}
+
+// font-family: 'Cormorant Infant', serif;
+// font-family: 'Lora', serif;
+// font-family: 'Poiret One', cursive;

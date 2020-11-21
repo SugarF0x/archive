@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'Caveat Regular';
+  src: url('fonts/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+small {
+  font-size: 120% !important;
+}
+p,
+li {
+  font-family: 'Didact Gothic', sans-serif;
+}
+html,
+body {
+  font-size: 125%;
+  height: 100%;
+}
+@media (min-width: 1200px) {
+  html,
+  body {
+    font-size: 175%;
+  }
+}
+body > section,
+body > section > .row {
+  min-height: 85vh;
+}
+body > section:nth-of-type(1),
+body > section:nth-of-type(1) > .row {
+  min-height: 100vh;
+}
+body > .bumper {
+  background-image: url("../src/img/bumper.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 15vh;
+  margin: 10vh 0;
+}
+body:before {
+  content: '';
+  display: block;
+  background-image: url("../src/img/bumper-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  height: 20vh;
+  width: 90vw;
+  margin-bottom: -5vh;
+  margin-left: 5vw;
+}
+body:after {
+  content: '';
+  display: block;
+  background-image: url("../src/img/bumper-big.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20vh;
+  width: 90vw;
+  margin-left: 5vw;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*
+body > section:nth-of-type(2n) {
+   background-color: skyblue;
+}
+
+body > section:nth-of-type(2n-1) {
+  background-color: silver;
+}
+*/
+#name__breaker:before,
+#name__breaker:after {
+  content: '';
+  display: inline-block;
+  width: 25vw;
+  color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5rem;
+}
+#head #head__date {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+#head #head__date #head__date-time span {
+  display: inline-block;
+}
+#head #head__date #head__date-time span:nth-of-type(2) {
+  font-size: 50%;
+  vertical-align: top;
+  height: 2rem;
+}
+#head #head__date #head__date-mid p:nth-of-type(1) {
+  margin-bottom: -0.5rem;
+}
+#head #head__date #head__date-mid p:nth-of-type(3) {
+  margin-top: -0.5rem;
+}
+#head #head__date p {
+  margin-bottom: 0;
+}
+#head #head__date div:nth-of-type(1),
+#head #head__date div:nth-of-type(3) {
+  width: 5rem;
+}
+#head #head__date div:nth-of-type(1) {
+  text-align: right;
+}
+#head #head__date div:nth-of-type(3) {
+  text-align: left;
+}
+#head #head__date p:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+#get-to i {
+  font-size: 400%;
+}
+@media (min-width: 576px) {
+  #get-to .get-to__text {
+    font-size: 75%;
+  }
+}
+#plan ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 1rem;
+}
+#plan ul li {
+  display: flex;
+  flex-flow: row;
+}
+#plan ul li * {
+  display: inline-block;
+}
+#plan ul li time {
+  order: 1;
+  width: 100%;
+}
+#plan ul li time:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -2rem;
+  height: 100%;
+  margin-left: 65%;
+  border-left: 3px solid black;
+}
+#plan ul li .text {
+  order: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+#plan ul li .text object {
+  order: 2;
+  max-height: 10vh;
+  max-width: 10vw;
+}
+#plan ul li .text p {
+  order: 1;
+  margin-bottom: 0;
+}
+#plan ul li .text:before {
+  content: '';
+  display: block;
+  width: 1rem;
+  position: relative;
+  left: -40%;
+  top: 1rem;
+  margin-top: -0.5rem;
+  border-bottom: 3px solid black;
+}
+@media (min-width: 576px) {
+  #plan ul {
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: -1rem;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    text-overflow: clip;
+  }
+  #plan ul li {
+    display: inline-block;
+  }
+  #plan ul li .text {
+    display: inline-block;
+    font-size: 0.75rem;
+    max-width: 6rem;
+    max-height: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #plan ul li .text p {
+    min-height: 2rem;
+    min-width: 3.5rem;
+  }
+  #plan ul li .text object {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+  #plan ul li time {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #plan ul li .text:after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 0.5rem;
+    width: 150%;
+    margin-left: -25%;
+    border-bottom: 3px solid black;
+  }
+  #plan ul li .text:before {
+    border-bottom: none;
+  }
+  #plan ul li time:before {
+    content: '';
+    display: block;
+    width: 0.25rem;
+    height: 1rem;
+    position: relative;
+    left: 50%;
+    top: 0.25rem;
+    margin-top: -0.5rem;
+    border-left: 3px solid black;
+  }
+}
+#wear li {
+  text-align: left;
+}
+#wear .wear__dress {
+  max-height: 25vh;
+  max-width: 25vw;
+}
+#wear .wear__suit {
+  max-height: 20vh;
+  max-width: 20vw;
+}
+#wear .palette {
+  width: 75vw;
+  height: 10vh;
+}
+@media (min-width: 576px) {
+  #wear .palette {
+    width: 50vw;
+  }
+  #wear .wear__dress {
+    transform: translate(0%, 50%);
+  }
+}
+#gift {
+  overflow: hidden;
+}
+#gift object {
+  display: inline-block;
+  height: 55%;
+  width: 55%;
+}
+#gift .cross:after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 150%;
+  transform: rotate(45deg);
+  border-bottom: 2px solid black;
+  outline: 2px solid white;
+  top: -1.5rem;
+  left: -0.4rem;
+}
+#gift p {
+  font-size: 100%;
+}
+#gift .gift__bad > p {
+  font-size: 50%;
+}
+#gift .gift__bad object {
+  height: 100%;
+  width: 100%;
+}
+#gift .gift__10 object {
+  height: 100px;
+}
+@media (min-width: 576px) {
+  #gift p {
+    font-size: 100%;
+  }
+  #gift object {
+    height: 65%;
+    width: 65%;
+  }
+  #gift .gift__1,
+  #gift .gift__2 > p {
+    text-align: center !important;
+  }
+  #gift .gift__1 {
+    order: 1;
+  }
+  #gift .gift__2 {
+    order: 2;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+  }
+  #gift .gift__bad {
+    order: 3;
+  }
+  #gift .gift__bad p {
+    font-size: 70%;
+  }
+  #gift .gift__bad object {
+    height: 45%;
+    width: 45%;
+  }
+  #gift .cross:after {
+    top: -2rem;
+    left: 1rem;
+    width: 75%;
+    border-bottom: 5px solid black;
+    outline: 5px solid white;
+  }
+  #gift .gift__10 object {
+    height: 50%;
+  }
+  #gift .gift__10 object:first-of-type {
+    margin-top: 2rem;
+  }
+}
+#contact {
+  min-height: initial;
+}
+#contact .row {
+  min-height: initial;
+}
+#contact i {
+  font-size: 300%;
+  margin: 2rem 0;
+}
+* h2 {
+  font-family: 'Cormorant Infant', serif;
+}
+* h4,
+* small {
+  font-family: 'Cormorant Infant', serif;
+}
+* p,
+* li {
+  font-family: 'Poiret One', cursive;
+}
+* #head__greet {
+  font-family: 'Poiret One', cursive;
+  font-size: 125%;
+}
+* #head__greet #head__greet-name {
+  font-family: 'Cormorant Infant', serif;
+}
+* #head__names * {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 250%;
+}
+* #head__names #name__breaker {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+* #head__date * {
+  font-family: 'Lora', serif;
+}
+* #head__place {
+  font-family: 'Lora', serif;
+}
+* #head__footer * {
+  font-family: 'Poiret One', cursive;
+}
+/*# sourceMappingURL=style.css.map */
