@@ -1,4 +1,4 @@
-export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node';
+export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify';
 
 export interface IItem {
   title: string;
@@ -64,5 +64,15 @@ export const stack: IStack = {
     name: 'nodejs',
     desc: 'Node',
     fill: 'green'
+  },
+  nuxt: {
+    name: 'nuxt',
+    desc: 'Nuxt',
+    fill: 'green'
+  },
+  vuetify: {
+    name: 'vuetify',
+    desc: 'Vuetify',
+    fill: 'light-blue'
   }
 }
