@@ -28,19 +28,17 @@
           An active link is provided if one exists
         </v-card-text>
       </v-card>
-      <v-container>
-        <v-row>
-          <v-col cols="12"
-                 sm="6"
-                 md="4"
-                 v-for="item in projects"
-                 :key="item.title"
-                 class="d-flex align-content-stretch"
-          >
-            <archive-item :item="item" />
-          </v-col>
-        </v-row>
-      </v-container>
+      <v-row>
+        <v-col cols="12"
+               sm="6"
+               md="4"
+               v-for="item in projects"
+               :key="item.title"
+               class="d-flex align-content-stretch"
+        >
+          <archive-item :item="item" />
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>
