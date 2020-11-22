@@ -5,12 +5,13 @@
   >
     <v-card class="d-inline-flex flex-column text-center pa-2">
       <h1 class="display-3">
-          {{ error.statusCode }} - {{ error.message }}
+          {{ error.statusCode }}
       </h1>
       <v-card-text>
+        <h3>{{ error.message }}</h3>
         <p v-if="error.config" class="text-left mt-5 pa-2 secondary white--text">{{ error.config }}</p>
       </v-card-text>
-      <v-card-actions>
+      <v-card-actions class="actions">
         <v-btn nuxt
                to="/"
                color="blue darken-2"
@@ -62,8 +63,13 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-h1 {
-  font-size: 20px;
+<style lang="less" scoped>
+.actions {
+  > * {
+    margin-right: .5rem;
+  }
+  > *:last-child {
+    margin-right: 0
+  }
 }
 </style>
