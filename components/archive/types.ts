@@ -1,4 +1,4 @@
-export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa';
+export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa' | 'plugin';
 
 export interface IItem {
   title: string;
@@ -80,5 +80,10 @@ export const stack: IStack = {
     name: 'open-in-app',
     desc: 'PWA',
     fill: 'white'
+  },
+  plugin: {
+    name: 'puzzle',
+    desc: 'Chrome Extension',
+    fill: 'grey'
   }
 }
