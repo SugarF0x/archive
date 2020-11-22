@@ -68,7 +68,8 @@ export default Vue.extend({
         title: entry.title,
         description: entry.description,
         stack: entry.stack,
-        thumbnail: entry.thumbnail
+        thumbnail: entry.thumbnail,
+        slug: entry.slug
       })
     })
     return { projects }

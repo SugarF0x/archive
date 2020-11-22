@@ -10,6 +10,15 @@
     <v-card-text>
       {{ item.description }}
     </v-card-text>
+
+    <v-card-actions>
+      <v-btn nuxt
+             :to="'/details/'+item.slug"
+             block
+      >
+        Details
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 

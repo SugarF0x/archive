@@ -3,8 +3,9 @@ export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva
 export interface IItem {
   title: string;
   description: string;
-  stack: TStack[],
+  stack: TStack[];
   thumbnail: string;
+  slug: string;
 }
 
 /**
