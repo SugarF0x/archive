@@ -1,4 +1,5 @@
 ---
+status: active
 title: Raider
 stack: ['nuxt','ts','konva','pwa']
 thumbnail: https://placehold.it/200x100/000/F00?text=Raider

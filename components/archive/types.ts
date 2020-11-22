@@ -6,6 +6,7 @@ export interface IItem {
   stack: TStack[];
   thumbnail: string;
   slug: string;
+  status: string;
 }
 
 /**
