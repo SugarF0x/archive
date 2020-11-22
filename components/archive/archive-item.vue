@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-img height="100"
+  <v-card class="d-flex flex-column">
+    <v-img max-height="100"
            :src="item.thumbnail"
     ></v-img>
     <v-card-title>{{ item.title }}</v-card-title>
@@ -11,7 +11,7 @@
       {{ item.description }}
     </v-card-text>
 
-    <v-card-actions>
+    <v-card-actions class="actions">
       <v-btn nuxt
              :to="'/details/'+item.slug"
              block
@@ -38,3 +38,10 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="less" scoped>
+.actions {
+  flex-grow: 1;
+  align-items: flex-end;
+}
+</style>

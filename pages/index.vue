@@ -35,6 +35,7 @@
                  md="4"
                  v-for="item in projects"
                  :key="item.title"
+                 class="d-flex align-content-stretch"
           >
             <archive-item :item="item" />
           </v-col>
