@@ -59,8 +59,8 @@ export default Vue.extend({
       projects: undefined
     }
   },
-  async asyncData({ $axios }) {
-    let content = await $axios.$get(`http://localhost:${location.port}/_content`);
+  async asyncData({ $content }) {
+    let content = await $content().fetch();
     const projects: IItem[] = [];
     content.forEach((entry: any) => {
       projects.push({

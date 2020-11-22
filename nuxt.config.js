@@ -44,7 +44,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios' // TODO: remove it? question mark?
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
