@@ -1,9 +1,12 @@
 <template>
-  <v-card class="d-flex flex-column">
+  <v-card class="d-flex flex-column text-center">
     <v-img max-height="100"
            :src="item.thumbnail"
     ></v-img>
-    <v-card-title>{{ item.title }}</v-card-title>
+
+    <v-card-title class="justify-center">
+      {{ item.title }}
+    </v-card-title>
 
     <archive-item-stack :item="item" />
 
