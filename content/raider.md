@@ -1,9 +1,9 @@
 ---
 title: Raider
-stack: ['ts','vue', 'konva']
+stack: ['nuxt','ts','konva']
 thumbnail: https://placehold.it/200x100/000/F00?text=Raider
 ---
 
-Clone of Dungeon Raid
+A passion-replica of Dungeon Raid - an old and no longer updated smartphone game
 <!--more-->
 
