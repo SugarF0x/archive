@@ -1,4 +1,4 @@
-export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify';
+export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa';
 
 export interface IItem {
   title: string;
@@ -75,5 +75,10 @@ export const stack: IStack = {
     name: 'vuetify',
     desc: 'Vuetify',
     fill: 'light-blue'
+  },
+  pwa: {
+    name: 'open-in-app',
+    desc: 'PWA',
+    fill: 'white'
   }
 }
