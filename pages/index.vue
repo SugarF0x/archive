@@ -28,7 +28,21 @@
           An active link is provided if one exists
         </v-card-text>
       </v-card>
-      <v-row>
+      <v-row v-if="!projects">
+        <v-col cols="12"
+               sm="6"
+               md="4"
+               v-for="item in 3"
+               :key="item+'skeleton'"
+               class="d-flex align-content-stretch"
+        >
+          <v-skeleton-loader class="mx-auto"
+                             width="100%"
+                             type="card"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-else>
         <v-col cols="12"
                sm="6"
                md="4"
