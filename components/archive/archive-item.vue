@@ -1,6 +1,7 @@
 <template>
   <v-card class="d-flex flex-column text-center">
     <v-img max-height="100"
+           min-height="100"
            :src="item.thumbnail"
            class="position-relative"
     >
