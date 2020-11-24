@@ -1,6 +1,10 @@
 <template lang="pug">
   v-card.d-flex.flex-column.text-center.card
-    v-img.position-relative(:src="item.thumbnail")
+    v-img.position-relative(
+      :src="item.thumbnail"
+      min-height="100"
+      max-height="100"
+      )
       v-tooltip(
         top
         max-width="350"
