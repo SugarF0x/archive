@@ -1,27 +1,22 @@
-<template>
-  <v-container class="pa-0">
-    <v-row justify="center" no-gutters>
-      <v-col cols="2"
-             class="d-flex justify-center"
-             v-for="icon in stack"
-             :key="item.title+icon.name"
-      >
-        <v-tooltip top>
-          <template v-slot:activator="{ on, attrs }">
-            <v-icon v-bind="attrs"
-                    v-on="on"
-                    :color="icon.fill"
-            >
-              mdi-{{ icon.name }}
-            </v-icon>
-          </template>
-          <span>
-            {{ icon.desc }}
-          </span>
-        </v-tooltip>
-      </v-col>
-    </v-row>
-  </v-container>
+<template lang="pug">
+  v-container.pa-0
+    v-row(
+      justify="center"
+      no-gutters
+    )
+      v-col.d-flex.justify-center(
+        cols="2"
+        v-for="icon in stack"
+        :key="item.title+icon.name"
+      )
+        v-tooltip(top)
+          template(v-slot:activator="{ on, attrs }")
+            v-icon(
+              v-bind="attrs"
+              v-on="on"
+              :color="icon.fill"
+            ) mdi-{{ icon.name }}
+          span {{ icon.desc }}
 </template>
 
 <script lang="ts">

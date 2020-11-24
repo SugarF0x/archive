@@ -1,51 +1,39 @@
-<template>
-  <v-card class="d-flex flex-column text-center">
-    <v-img max-height="100"
-           min-height="100"
-           :src="item.thumbnail"
-           class="position-relative"
-    >
-      <!-- TODO: turn these chips into flags (colored triangles in the top-right corner) -->
-      <v-tooltip top
-                 max-width="350"
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-chip class="status"
-                  :color="status.color"
-                  v-bind="attrs"
-                  v-on="on"
-          >
-            {{ item.status }}
-          </v-chip>
-        </template>
-        <span>
-          {{ status.title }}
-        </span>
-      </v-tooltip>
-    </v-img>
+<template lang="pug">
+  v-card.d-flex.flex-column.text-center
+    v-img.position-relative(
+      max-height="100"
+      min-height="100"
+      :src="item.thumbnail"
+    )
+      v-tooltip(
+        top
+        max-width="350"
+      )
+        template(v-slot:activator="{ on, attrs }")
+          v-chip.status(
+            :color="status.color"
+            v-bind="attrs"
+            v-on="on"
+          ) {{ item.status }}
+        span {{ status.title }}
 
-    <v-card-title class="justify-center">
-      {{ item.title }}
-    </v-card-title>
+    v-card-title.justify-center {{ item.title }}
 
-    <archive-item-stack :item="item" />
+    archive-item-stack(:item="item")
 
-    <v-card-text>
-      {{ item.description }}
-    </v-card-text>
+    v-card-text {{ item.description }}
 
-    <v-card-actions class="actions">
-      <v-btn nuxt
-             :to="'/details/'+item.slug"
-             block
-      >
-        Details
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+    v-card-actions.actions
+      v-btn(
+        nuxt
+        :to="'/details/'+item.slug"
+        block
+      ) Details
 </template>
 
 <script lang="ts">
+// TODO: turn chips into flags (colored triangles in the top-right corner)
+
 import Vue from 'vue';
 import { IItem } from './types';
 
