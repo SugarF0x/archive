@@ -26,13 +26,11 @@
       span Sugar Archives &copy; {{ new Date().getFullYear() }}
 </template>
 
-<style lang="less" scoped>
-@font-face {
-  font-family: 'Kurbanistika';
-  src: url('/fonts/kurbanistika.otf');
-}
-#logo {
-  font-family: Kurbanistika, sans-serif;
-  font-size: 2.5rem;
-}
+<style lang="sass" scoped>
+@font-face
+  font-family: 'Kurbanistika'
+  src: url('/fonts/kurbanistika.otf')
+#logo
+  font-family: Kurbanistika, sans-serif
+  font-size: 2.5rem
 </style>

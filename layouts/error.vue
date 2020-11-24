@@ -58,13 +58,10 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="less" scoped>
-.actions {
-  > * {
-    margin-right: .5rem;
-  }
-  > *:last-child {
+<style lang="sass" scoped>
+.actions
+  > *
+    margin-right: .5rem
+  > *:last-child
     margin-right: 0
-  }
-}
 </style>

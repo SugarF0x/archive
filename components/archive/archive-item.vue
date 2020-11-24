@@ -76,16 +76,14 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="less" scoped>
-.actions {
-  flex-grow: 1;
-  align-items: flex-end;
-}
-.status {
-  margin: .3rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-transform: uppercase;
-}
+<style lang="sass" scoped>
+.actions
+  flex-grow: 1
+  align-items: flex-end
+.status
+  margin: .3rem
+  position: absolute
+  top: 0
+  right: 0
+  text-transform: uppercase
 </style>
