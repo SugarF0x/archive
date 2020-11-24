@@ -1,17 +1,16 @@
 <template lang="pug">
-  div(v-if="icon")
-    div.icon(v-if="!tooltip")
-      v-icon(:color="icon.fill") mdi-{{ icon.name }}
-      span(v-if="name") {{ icon.desc }}
-    div(v-else)
-      v-tooltip(top)
-        template(v-slot:activator="{ on, attrs }")
-          v-icon(
-            v-bind="attrs"
-            v-on="on"
-            :color="icon.fill"
-          ) mdi-{{ icon.name }}
-        span {{ icon.desc }}
+  div.icon(v-if="!tooltip")
+    v-icon(:color="icon.fill") mdi-{{ icon.name }}
+    span(v-if="name") {{ icon.desc }}
+  div(v-else)
+    v-tooltip(top)
+      template(v-slot:activator="{ on, attrs }")
+        v-icon(
+          v-bind="attrs"
+          v-on="on"
+          :color="icon.fill"
+        ) mdi-{{ icon.name }}
+      span {{ icon.desc }}
 </template>
 
 <script lang="ts">

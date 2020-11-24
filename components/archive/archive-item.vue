@@ -1,10 +1,6 @@
 <template lang="pug">
-  v-card.d-flex.flex-column.text-center
-    v-img.position-relative(
-      max-height="100"
-      min-height="100"
-      :src="item.thumbnail"
-      )
+  v-card.d-flex.flex-column.text-center.card
+    v-img.position-relative(:src="item.thumbnail")
       v-tooltip(
         top
         max-width="350"
@@ -92,9 +88,12 @@ export default Vue.extend({
 </script>
 
 <style lang="sass" scoped>
-.actions
-  flex-grow: 1
-  align-items: flex-end
+.card
+  > *
+    flex-grow: 0
+  .actions
+    flex-grow: 1
+    align-items: flex-end
 .status
   margin: .3rem
   position: absolute
