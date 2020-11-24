@@ -19,7 +19,22 @@
 
     v-card-title.justify-center {{ item.title }}
 
-    archive-item-stack(:item="item")
+    v-container.pa-0
+    v-row(
+      justify="center"
+      no-gutters
+    )
+      v-col.d-flex.justify-center(
+        cols="2"
+        v-for="icon in item.stack"
+        :key="item.title+icon"
+      )
+        v-icon(color="transparent") mdi-cancel
+        stack-icon(
+          :item="icon"
+          tooltip
+        )
+        v-icon(color="transparent") mdi-cancel
 
     v-card-text {{ item.description }}
 
@@ -37,7 +52,7 @@
 import Vue from 'vue';
 import { IItem } from './types';
 
-import archiveItemStack from './archive-item-stack.vue';
+import StackIcon from '@/components/stack/stack-icon.vue';
 
 export default Vue.extend({
   name: "archive-item",
@@ -45,7 +60,7 @@ export default Vue.extend({
     item: Object as () => IItem
   },
   components: {
-    'archive-item-stack': archiveItemStack
+    'stack-icon': StackIcon
   },
   computed: {
     status() {
