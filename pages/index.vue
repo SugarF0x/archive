@@ -2,14 +2,14 @@
   v-row(
     justify="center"
     align="center"
-  )
+    )
     v-col(
       cols="11"
       sm="10"
       md="9"
       lg="8"
       xl="6"
-    )
+      )
       v-card
         v-card-title Welcome to Sugar Archives
         v-card-text
@@ -28,11 +28,11 @@
           md="4"
           v-for="item in 3"
           :key="item+'skeleton'"
-        )
+          )
           v-skeleton-loader.mx-auto(
             width="100%"
             type="card"
-          )
+            )
       v-row(v-else)
         v-col.d-flex.align-content-stretch(
           cols="12"
@@ -40,7 +40,7 @@
           md="4"
           v-for="item in projects"
           :key="item.title"
-        )
+          )
           archive-item(:item="item")
 </template>
 

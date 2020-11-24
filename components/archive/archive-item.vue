@@ -4,17 +4,17 @@
       max-height="100"
       min-height="100"
       :src="item.thumbnail"
-    )
+      )
       v-tooltip(
         top
         max-width="350"
-      )
+        )
         template(v-slot:activator="{ on, attrs }")
           v-chip.status(
             :color="status.color"
             v-bind="attrs"
             v-on="on"
-          ) {{ item.status }}
+            ) {{ item.status }}
         span {{ status.title }}
 
     v-card-title.justify-center {{ item.title }}
@@ -28,7 +28,7 @@
         nuxt
         :to="'/details/'+item.slug"
         block
-      ) Details
+        ) Details
 </template>
 
 <script lang="ts">

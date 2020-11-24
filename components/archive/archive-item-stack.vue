@@ -3,19 +3,19 @@
     v-row(
       justify="center"
       no-gutters
-    )
+      )
       v-col.d-flex.justify-center(
         cols="2"
         v-for="icon in stack"
         :key="item.title+icon.name"
-      )
+        )
         v-tooltip(top)
           template(v-slot:activator="{ on, attrs }")
             v-icon(
               v-bind="attrs"
               v-on="on"
               :color="icon.fill"
-            ) mdi-{{ icon.name }}
+              ) mdi-{{ icon.name }}
           span {{ icon.desc }}
 </template>
 

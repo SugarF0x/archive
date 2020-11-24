@@ -3,7 +3,7 @@
     column
     justify-center
     align-center
-  )
+    )
     v-card.d-inline-flex.flex-column.text-center.pa-2
       h1.display-3 {{ error.statusCode }}
       v-card-text
@@ -14,7 +14,7 @@
           nuxt
           to="/"
           color="blue darken-2"
-        )
+          )
           v-icon(left) mdi-home
           | Home Page
         v-spacer
@@ -22,13 +22,13 @@
           @click="reload"
           color="blue darken-2"
           v-if="error.statusCode !== 404"
-        ) Reload
+          ) Reload
           v-icon(right) mdi-update
         v-btn(
           @click="$router.go(-1)"
           color="blue darken-2"
           v-else
-        ) Go back
+          ) Go back
           v-icon(right) mdi-undo-variant
 </template>
 
