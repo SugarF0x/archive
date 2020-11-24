@@ -25,12 +25,13 @@
         v-for="icon in item.stack"
         :key="item.title+icon"
       )
-        v-icon(color="transparent") mdi-cancel
-        stack-icon(
+        // rendered icon
+        stack-icon(:item="icon")
+        // ghost icon with the tooltip
+        stack-icon.tooltip(
           :item="icon"
           tooltip
         )
-        v-icon(color="transparent") mdi-cancel
 
     v-card-text {{ item.description }}
 
@@ -44,6 +45,7 @@
 
 <script lang="ts">
 // TODO: turn chips into flags (colored triangles in the top-right corner)
+// TODO: make it so that icon with tooltip prop creates a ghost and toRender elements on itself? question mark?
 
 import Vue from 'vue';
 import { IItem } from './types';
@@ -100,4 +102,7 @@ export default Vue.extend({
   top: 0
   right: 0
   text-transform: uppercase
+.tooltip
+  opacity: 0
+  position: absolute
 </style>

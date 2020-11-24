@@ -45,10 +45,6 @@
 </template>
 
 <script lang="ts">
-/* TODO: Fix details click transition
-     this blinking is going to drive me crazy
- */
-
 import Vue from 'vue';
 import { IItem } from '@/components/archive/types';
 
