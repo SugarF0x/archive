@@ -21,7 +21,7 @@
             as well as history behind it's creation
           p Development stack is displayed along the other useful information like snippets
           | An active link is provided if one exists
-      v-row(v-if="!projects")
+      v-row(v-if="!sorted.length")
         v-col.d-flex.align-content-stretch(
           cols="12"
           sm="6"
@@ -38,7 +38,7 @@
           cols="12"
           sm="6"
           md="4"
-          v-for="item in projects"
+          v-for="item in sorted"
           :key="item.title"
           )
           archive-item(:item="item")
@@ -57,7 +57,30 @@ export default Vue.extend({
   },
   data() {
     return {
-      projects: undefined
+      projects: [] as IItem[]
+    }
+  },
+  computed: {
+    /**
+     * Sort projects by their status:
+     * 1. Active
+     * 2. Stagnant
+     * 3. Archived
+     */
+    sorted(): IItem[] {
+      return this.projects.sort((a, b) => {
+        const priority = [
+          'active',
+          'stagnant',
+          'archived'
+        ]
+        if (priority.indexOf(a.status) > priority.indexOf(b.status)) {
+          return 1;
+        } else if (priority.indexOf(a.status) < priority.indexOf(b.status)) {
+          return -1;
+        }
+        return 0;
+      });
     }
   },
   async asyncData({ $content }) {
