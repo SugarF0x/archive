@@ -9,6 +9,7 @@
         v-for="icon in stack"
         :key="item.title+icon.name"
         )
+        v-icon(color="transparent") mdi-cancel
         v-tooltip(top)
           template(v-slot:activator="{ on, attrs }")
             v-icon(
@@ -17,6 +18,7 @@
               :color="icon.fill"
               ) mdi-{{ icon.name }}
           span {{ icon.desc }}
+        v-icon(color="transparent") mdi-cancel
 </template>
 
 <script lang="ts">
