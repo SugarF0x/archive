@@ -1,36 +1,88 @@
 <template lang="pug">
-  v-row(
-    align="center"
-    justify="center"
-    )
-    v-col.order-1.order-sm-0(
+  v-row(justify="center")
+    v-col(
       cols="12"
-      sm="4"
-      xl="3"
+      lg="10"
       )
-      v-card
-        v-card-title Left panel
-        v-card-text Left panel content
-    v-col.order-0.order-sm-1(
-      cols="12"
-      sm="8"
-      xl="9"
-      )
-      v-card
-        v-card-title Right article
-        v-card-text Right content
+      v-row(justify="center")
+        v-col.order-1.order-sm-0.pu-0.pu-sm-1(
+          cols="12"
+          sm="4"
+          xl="3"
+          )
+          v-row()
+            v-col(cols="12")
+              v-card
+                v-card-title Status:
+                  v-chip.ml-2(:color="chipColor") {{ page.status }}
+            v-col(cols="12")
+              v-card
+                v-card-title Stack:
+                v-card-text
+                  ul
+                    li(v-for="n in page.stack")
+                      stack-icon(
+                        :item="n"
+                        name
+                        )
+            v-col(cols="12")
+              v-card
+                v-card-actions.d-flex.flex-wrap.justify-space-between
+                  v-btn.ma-1(:href="page.git")
+                    v-icon(left) mdi-github
+                    | GitHub
+                  v-btn.ma-1(:href="page.link") Link
+                    v-icon(right) mdi-link
+
+        v-col.order-0.order-sm-1.pb-0.pb-sm-1(
+          cols="12"
+          sm="8"
+          xl="9"
+          )
+          v-row
+            v-col(cols="12")
+              v-card
+                v-img(
+                  :src="page.banner"
+                  min-height="200"
+                  max-height="200"
+                  )
+            v-col.pb-0.pb-sm-1(cols="12")
+              v-card(tag="article")
+                v-card-title {{ page.title }}
+                v-card-text
+                  nuxt-content.details(:document="page")
 </template>
 
 <script lang="ts">
 // TODO: add column to the left of main article (like VK profile column) containing things like Stack used and Status
 
 import Vue from 'vue';
+import StackIcon from '@/components/stack/stack-icon.vue'
 
 export default Vue.extend({
   name: 'description-slug',
+  components: {
+    'stack-icon': StackIcon
+  },
   data() {
     return {
-      page: undefined
+      page: undefined as any
+    }
+  },
+  computed: {
+    chipColor(): string {
+      if (!this.page) return 'primary'
+      switch (this.page.status) {
+        case 'active':
+          return 'green'
+        case 'stagnant':
+          return 'orange'
+        case 'archived':
+          return 'red'
+        default:
+          return 'primary'
+      }
     }
   },
   async asyncData ({ $content, params }) {
@@ -42,3 +94,8 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+h3
+  margin-bottom: .5rem
+</style>

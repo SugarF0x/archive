@@ -13,7 +13,25 @@
 .page-enter-active, .page-leave-active {
   transition: all .1s;
 }
-
 .page-enter, .page-leave-active {
   opacity: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem !important;
+}
+li {
+  margin: .2rem 0 .2rem 0;
+}
+
+/* overrides */
+
+.v-card__title {
+  word-break: normal !important;
+}
+
+.details .nuxt-content > *:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
