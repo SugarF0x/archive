@@ -5,17 +5,13 @@
       min-height="100"
       max-height="100"
       )
-      v-tooltip(
-        top
-        max-width="350"
-        )
-        template(v-slot:activator="{ on, attrs }")
-          v-chip.status(
-            :color="status.color"
-            v-bind="attrs"
-            v-on="on"
+      v-scroll-x-reverse-transition(origin="top right 0")
+        v-hover(v-slot="{ hover }")
+          v-card.chip(
+            :color="statusColor"
+            tile
+            :class="hover ? '' : 'foldChip'"
             ) {{ item.status }}
-        span {{ status.title }}
 
     v-card-title.justify-center {{ item.title }}
 
@@ -48,9 +44,6 @@
 </template>
 
 <script lang="ts">
-// TODO: turn chips into flags (colored triangles in the top-right corner)
-// TODO: make it so that icon with tooltip prop creates a ghost and toRender elements on itself? question mark?
-
 import Vue from 'vue';
 import { IItem } from './types';
 
@@ -65,28 +58,16 @@ export default Vue.extend({
     'stack-icon': StackIcon
   },
   computed: {
-    status() {
+    statusColor() {
       switch (this.item.status) {
         case 'active':
-          return {
-            color: 'green',
-            title: 'This project is currently being actively worked on'
-          }
+          return 'green'
         case 'stagnant':
-          return {
-            color: 'orange',
-            title: 'Work on this project is frozen for the time being for either I plan to return to it or the circumstances are beyond my control'
-          }
+          return 'orange'
         case 'archived':
-          return {
-            color: 'red',
-            title: 'Work on this project is stopped for it is either complete, or I am unlikely to return to it'
-          }
+          return 'red'
         default:
-          return {
-            color: 'primary',
-            title: 'unidentified'
-          }
+          return 'primary'
       }
     }
   }
@@ -100,13 +81,27 @@ export default Vue.extend({
   .actions
     flex-grow: 1
     align-items: flex-end
-.status
-  margin: .3rem
-  position: absolute
-  top: 0
-  right: 0
-  text-transform: uppercase
+
 .tooltip
   opacity: 0
   position: absolute
+
+.chip
+  position: absolute
+  height: 1.5rem
+  line-height: 1.5rem
+  top: 0
+  right: 0
+  transition: all .5s
+  font-size: 1rem
+  width: 100%
+  min-height: 1rem
+  min-width: 1rem
+  text-transform: uppercase
+  user-select: none
+.foldChip
+  width: 2rem
+  right: -1.2rem
+  color: transparent
+  transform: skewX(45deg)
 </style>
