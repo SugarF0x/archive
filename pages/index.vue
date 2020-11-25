@@ -13,16 +13,12 @@
       v-row
         v-col(cols="12")
           v-card
-            v-card-title Welcome to Sugar Archives
+            v-card-title {{ $t('home.splash.title') }}
             v-card-text
-              p.
-                Here you will find all the projects I have been working on in the past,
-                maintain now or keep working in the present
-              p.
-                The project will also contain description of it's functionality
-                as well as history behind it's creation
-              p Development stack is displayed along the other useful information like snippets
-              | An active link is provided if one exists
+              p {{ $t('home.splash.p.1') }}
+              p {{ $t('home.splash.p.2') }}
+              p {{ $t('home.splash.p.3') }}
+              | {{ $t('home.splash.p.4') }}
       v-row(v-if="!sorted.length")
         v-col.d-flex.align-content-stretch(
           cols="12"
@@ -48,6 +44,7 @@
 
 <script lang="ts">
 // TODO: add creating & termination dates for projects
+// TODO: add image loaders
 
 import Vue from 'vue';
 import { IItem } from '@/components/archive/types';
@@ -87,8 +84,8 @@ export default Vue.extend({
       });
     }
   },
-  async asyncData({ $content }) {
-    let content = await $content().fetch();
+  async asyncData({ $content, app }) {
+    let content = await $content(app.i18n.locale).fetch();
     const projects: IItem[] = [];
     content.forEach((entry: any) => {
       projects.push({

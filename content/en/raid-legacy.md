@@ -22,7 +22,5 @@ into a **Progressive Web App** for users to install it on their smartphones and 
 
 The code for all the logic is written in **TypeScript** with most of all the type checks maintained to the fullest.
 
-Given my lack of experience, th development is not going exactly smoothly. I am open for criticism. Any contributions
+Given my lack of experience, the development is not going exactly smoothly. I am open for criticism. Any contributions
 to the repository are more than welcome.
-
-Feel free to play the latest stable build at active link provided.

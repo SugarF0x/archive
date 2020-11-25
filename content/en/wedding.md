@@ -1,6 +1,6 @@
 ---
 status: archived
-title: Wedding
+title: Wedding invitation
 stack: ['html','css','js','bootstrap']
 thumbnail: /img/thumbnail/wedding.jpg
 header: /img/header/wedding.jpg
@@ -10,7 +10,7 @@ link: https://archive.sugarfox.ru/items/wedding
 
 Wedding invitation with customisable header text.
 <!--more-->
-My sister wanted a landing page for her wedding. Lucky for her I was learnign Bootstrap at the time
+My sister wanted a landing page for her wedding. Lucky for her I was learnign **Bootstrap 4** at the time
 and was looking for some inspiration to put the newly acquired knowledge to practice.
 
 This page came to be in a couple of weeks of development under her supervision as a client.

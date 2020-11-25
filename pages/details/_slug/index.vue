@@ -13,11 +13,11 @@
           v-row()
             v-col(cols="12")
               v-card
-                v-card-title Status:
-                  v-chip.ml-2(:color="chipColor") {{ page.status }}
+                v-card-title.text-capitalize {{ $t("status") }}:
+                  v-chip.ml-2.text-uppercase(:color="chipColor") {{ $t(`status.${page.status}`) }}
             v-col(cols="12")
               v-card
-                v-card-title Stack:
+                v-card-title.text-capitalize {{ $t("stack") }}:
                 v-card-text
                   ul
                     li(v-for="n in page.stack")
@@ -37,7 +37,7 @@
                   v-btn.ma-1(
                     :href="page.link"
                     :disabled="!page.link"
-                    ) Link
+                    ) {{ $t("link") }}
                     v-icon(right) mdi-link
 
         v-col.order-0.order-sm-1.pb-0.pb-sm-1(
@@ -88,8 +88,8 @@ export default Vue.extend({
       }
     }
   },
-  async asyncData ({ $content, params }) {
-    const page = await $content(params.slug).fetch()
+  async asyncData ({ $content, params, app }) {
+    const page = await $content(app.i18n.locale + '/' + params.slug).fetch()
 
     return {
       page

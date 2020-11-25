@@ -12,23 +12,23 @@
       v-card-actions.actions
         v-btn(
           nuxt
-          to="/"
+          :to="localePath('/')"
           color="blue darken-2"
           )
           v-icon(left) mdi-home
-          | Home Page
+          | {{ $t("link.home") }}
         v-spacer
         v-btn(
           @click="reload"
           color="blue darken-2"
           v-if="error.statusCode !== 404"
-          ) Reload
+          ) {{ $t("link.reload") }}
           v-icon(right) mdi-update
         v-btn(
           @click="$router.go(-1)"
           color="blue darken-2"
           v-else
-          ) Go back
+          ) {{ $t("link.back") }}
           v-icon(right) mdi-undo-variant
 </template>
 

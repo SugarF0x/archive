@@ -2,7 +2,7 @@
   v-app(dark)
     v-app-bar(app)
       router-link(
-        to="/"
+        :to="localePath('/')"
         style="text-decoration: none; color: inherit;"
         )
         v-row(

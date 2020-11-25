@@ -10,7 +10,7 @@
             :color="statusColor"
             tile
             :class="hover ? '' : 'foldChip'"
-            ) {{ item.status }}
+            ) {{ $t(`status.${item.status}`) }}
 
     v-card-title.justify-center {{ item.title }}
 
@@ -37,9 +37,9 @@
     v-card-actions.actions
       v-btn(
         nuxt
-        :to="'/details/'+item.slug"
+        :to="localePath('/details/'+item.slug)"
         block
-        ) Details
+        ) {{ $t("details") }}
 </template>
 
 <script lang="ts">
