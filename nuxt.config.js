@@ -16,7 +16,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Archives containing most of my abandoned, completed and ongoing projects along with their details and active links if any' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/sgfx_line.webp' }
     ]
   },
 
