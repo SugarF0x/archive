@@ -23,7 +23,11 @@
   word-break: normal !important;
 }
 
-.details .nuxt-content > *:last-of-type {
+
+.details .nuxt-content > ul {
+  margin-bottom: 1rem
+}
+.details .nuxt-content > *:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
 }
