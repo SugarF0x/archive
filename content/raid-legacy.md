@@ -1,9 +1,9 @@
 ---
 status: active
-title: Raider
+title: Raid Legacy
 stack: ['nuxt','ts','konva','pwa']
-thumbnail: https://placehold.it/200x100/000/F00?text=Raider
-banner: https://placehold.it/400x200/000/F00?text=Raider
+thumbnail: /img/thumbnail/raid-legacy.jpg
+header: /img/header/raid-legacy.jpg
 git: https://github.com/SugarF0x/raider
 link: https://raid.sugarfox.ru
 ---

@@ -49,9 +49,9 @@
             v-col(cols="12")
               v-card
                 v-img(
-                  :src="page.banner"
+                  :src="page.header"
                   min-height="200"
-                  max-height="200"
+                  max-height="400"
                   )
             v-col.pb-0.pb-sm-1(cols="12")
               v-card(tag="article")
@@ -61,8 +61,6 @@
 </template>
 
 <script lang="ts">
-// TODO: add column to the left of main article (like VK profile column) containing things like Stack used and Status
-
 import Vue from 'vue';
 import StackIcon from '@/components/stack/stack-icon.vue'
 
