@@ -10,17 +10,19 @@
       lg="8"
       xl="6"
       )
-      v-card
-        v-card-title Welcome to Sugar Archives
-        v-card-text
-          p.
-            Here you will find all the projects I have been working on in the past,
-            maintain now or keep working in the present
-          p.
-            The project will also contain description of it's functionality
-            as well as history behind it's creation
-          p Development stack is displayed along the other useful information like snippets
-          | An active link is provided if one exists
+      v-row
+        v-col(cols="12")
+          v-card
+            v-card-title Welcome to Sugar Archives
+            v-card-text
+              p.
+                Here you will find all the projects I have been working on in the past,
+                maintain now or keep working in the present
+              p.
+                The project will also contain description of it's functionality
+                as well as history behind it's creation
+              p Development stack is displayed along the other useful information like snippets
+              | An active link is provided if one exists
       v-row(v-if="!sorted.length")
         v-col.d-flex.align-content-stretch(
           cols="12"
