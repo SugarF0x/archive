@@ -17,14 +17,6 @@
   opacity: 0;
 }
 
-ul {
-  list-style: none;
-  padding-left: 1rem !important;
-}
-li {
-  margin: .2rem 0 .2rem 0;
-}
-
 /* overrides */
 
 .v-card__title {
