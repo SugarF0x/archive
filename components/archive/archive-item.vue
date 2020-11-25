@@ -2,8 +2,7 @@
   v-card.d-flex.flex-column.text-center.card
     v-img.position-relative(
       :src="item.thumbnail"
-      min-height="100"
-      max-height="100"
+      aspect-ratio="2"
       )
       v-scroll-x-reverse-transition(origin="top right 0")
         v-hover(v-slot="{ hover }")

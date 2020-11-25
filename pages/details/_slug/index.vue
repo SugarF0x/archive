@@ -50,7 +50,7 @@
               v-card
                 v-img(
                   :src="page.header"
-                  max-height="400"
+                  aspect-ratio="2"
                   )
             v-col.pb-0.pb-sm-1(cols="12")
               v-card(tag="article")
