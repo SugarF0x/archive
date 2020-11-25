@@ -50,7 +50,6 @@
               v-card
                 v-img(
                   :src="page.header"
-                  min-height="200"
                   max-height="400"
                   )
             v-col.pb-0.pb-sm-1(cols="12")
