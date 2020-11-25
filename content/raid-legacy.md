@@ -14,3 +14,15 @@ Given that Dungeon Raid stopped updating back in like 2013 or something like tha
 resulting in abysmally poor performance even on latest top-end devices,
 I took it upon myself to replicate the glorious game Dungeon Raid once was.
 
+Since the only thing I know of how to do was web dev, I decided to start working on it via canvas, thus
+effectively also working on this project being responsive enough to work on all devices.
+
+The project consist of one single component - the game itself. Yet it is wrapped in **Nuxt**. That is to easily convert it
+into a **Progressive Web App** for users to install it on their smartphones and use it offline.
+
+The code for all the logic is written in **TypeScript** with most of all the type checks maintained to the fullest.
+
+Given my lack of experience, th development is not going exactly smoothly. I am open for criticism. Any contributions
+to the repository are more than welcome.
+
+Feel free to play the latest stable build at active link provided.
