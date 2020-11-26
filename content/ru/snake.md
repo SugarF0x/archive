@@ -4,6 +4,7 @@ title: Змейка
 stack: ['html','css','js']
 git: https://github.com/SugarF0x/simple-assistant
 link: https://archive.sugarfox.ru/items/snake
+life: 5 Апреля 2019 - 12 Апреля 2019
 ---
 
 Змейка, написанная на ванильном JS и HTML таблицах в качестве дисплея.

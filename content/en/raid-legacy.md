@@ -4,6 +4,7 @@ title: Raid Legacy
 stack: ['nuxt','ts','konva','pwa']
 git: https://github.com/SugarF0x/raider
 link: https://raid.sugarfox.ru
+life: 1 September 2020 - To this day
 ---
 
 A passion-replica of Dungeon Raid - an old and no longer updated smartphone game.

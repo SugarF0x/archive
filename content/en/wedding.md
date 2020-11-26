@@ -4,6 +4,7 @@ title: Wedding invitation
 stack: ['html','css','js','bootstrap']
 git: https://github.com/SugarF0x/wedding
 link: https://archive.sugarfox.ru/items/wedding
+life: 19 May 2019 - 9 June 2019
 ---
 
 Wedding invitation with customisable header text.

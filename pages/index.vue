@@ -43,8 +43,6 @@
 </template>
 
 <script lang="ts">
-// TODO: add creating & termination dates for projects
-
 import Vue from 'vue';
 import { IItem } from '@/components/archive/types';
 

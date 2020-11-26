@@ -4,6 +4,7 @@ title: Приглашение на свадьбу
 stack: ['html','css','js','bootstrap']
 git: https://github.com/SugarF0x/wedding
 link: https://archive.sugarfox.ru/items/wedding
+life: 19 Мая 2019 - 9 Июня 2019
 ---
 
 Приглашение на свадьбу с возможностью индивидуализации сообщения.

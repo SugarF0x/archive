@@ -15,6 +15,7 @@
               v-card
                 v-card-title.text-capitalize {{ $t("status") }}:
                   v-chip.ml-2.text-uppercase(:color="chipColor") {{ $t(`status.${page.status}`) }}
+                v-card-text {{ page.life }}
             v-col(cols="12")
               v-card
                 v-card-title.text-capitalize {{ $t("stack") }}:

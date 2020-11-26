@@ -4,6 +4,7 @@ title: Simple Assistant
 stack: ['ts','vue','webpack','plugin']
 git: https://github.com/SugarF0x/simple-assistant
 link: null
+life: 11 June 2020 - 8 October 2020
 ---
 
 Automation plugin for SimpleMMO Web-browser game.

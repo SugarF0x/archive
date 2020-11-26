@@ -4,6 +4,7 @@ title: Pautova Project TBD
 stack: ['nuxt','ts','vuetify','node']
 git: https://github.com/SugarF0x/project-pautova
 link: null
+life: 22-26 September 2020 - ???
 ---
 
 Freelance project for displaying masterclass mentors and managing feedback requests.

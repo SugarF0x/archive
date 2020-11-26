@@ -4,6 +4,7 @@ title: Snake
 stack: ['html','css','js']
 git: https://github.com/SugarF0x/simple-assistant
 link: https://archive.sugarfox.ru/items/snake
+life: 5 April 2019 - 12 April 2019
 ---
 
 Snake game written on pure JS using table element as display.

@@ -4,6 +4,7 @@ title: Проект Паутова
 stack: ['nuxt','ts','vuetify','node']
 git: https://github.com/SugarF0x/project-pautova
 link: null
+life: 22-26 Сентября 2020 - ???
 ---
 
 Контрактный проект для записи на мастер-классы и управления заказами.
