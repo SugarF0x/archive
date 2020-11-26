@@ -2,8 +2,6 @@
 status: stagnant
 title: Проект Паутова
 stack: ['nuxt','ts','vuetify','node']
-thumbnail: /img/thumbnail/pautova.jpg
-header: /img/header/pautova.jpg
 git: https://github.com/SugarF0x/project-pautova
 link: null
 ---

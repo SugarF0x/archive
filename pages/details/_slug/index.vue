@@ -49,7 +49,7 @@
             v-col(cols="12")
               v-card
                 v-img(
-                  :src="page.header"
+                  :src="require(`~/assets/img/header/${page.slug}.jpg`)"
                   aspect-ratio="2"
                   )
                   template(v-slot:placeholder)

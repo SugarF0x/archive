@@ -2,8 +2,6 @@
 status: archived
 title: Приглашение на свадьбу
 stack: ['html','css','js','bootstrap']
-thumbnail: /img/thumbnail/wedding.jpg
-header: /img/header/wedding.jpg
 git: https://github.com/SugarF0x/wedding
 link: https://archive.sugarfox.ru/items/wedding
 ---

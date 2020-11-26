@@ -2,8 +2,6 @@
 status: archived
 title: Змейка
 stack: ['html','css','js']
-thumbnail: /img/thumbnail/snake.jpg
-header: /img/header/snake.jpg
 git: https://github.com/SugarF0x/simple-assistant
 link: https://archive.sugarfox.ru/items/snake
 ---

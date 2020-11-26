@@ -2,8 +2,6 @@
 status: active
 title: Raid Legacy
 stack: ['nuxt','ts','konva','pwa']
-thumbnail: /img/thumbnail/raid-legacy.jpg
-header: /img/header/raid-legacy.jpg
 git: https://github.com/SugarF0x/raider
 link: https://raid.sugarfox.ru
 ---

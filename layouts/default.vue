@@ -26,10 +26,11 @@
       span Sugar Archives &copy; {{ new Date().getFullYear() }}
 </template>
 
+<!--suppress CssUnknownTarget, comment: this is supposed to be prefixes with a tilda given it is to be mapped-->
 <style lang="sass" scoped>
 @font-face
   font-family: 'Kurbanistika'
-  src: url('/fonts/kurbanistika.otf')
+  src: url('~assets/fonts/kurbanistika.otf')
 #logo
   font-family: Kurbanistika, sans-serif
   font-size: 2.5rem
