@@ -112,5 +112,6 @@ export default Vue.extend({
   width: 2rem
   right: -1.2rem
   color: transparent
+  font-size: 0
   transform: skewX(45deg)
 </style>
