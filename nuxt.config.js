@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 import locales from './locales'
+import { VuetifyLoaderPlugin } from 'vuetify-loader'
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
@@ -83,5 +84,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extend(config) {
+      config.plugins.push(
+        new VuetifyLoaderPlugin({
+          progressiveImages: {
+            sharp: true
+          }
+        })
+      )
+    }
   }
 }

@@ -49,7 +49,7 @@
             v-col(cols="12")
               v-card
                 v-img(
-                  :src="require(`~/assets/img/header/${page.slug}.jpg`)"
+                  :src="require(`~/assets/img/header/${page.slug}.jpg?vuetify-preload`)"
                   aspect-ratio="2"
                   )
                   template(v-slot:placeholder)

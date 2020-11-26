@@ -1,7 +1,7 @@
 <template lang="pug">
   v-card.d-flex.flex-column.text-center.card
     v-img.position-relative(
-      :src="require(`~/assets/img/thumbnail/${item.slug}.jpg`)"
+      :src="require(`~/assets/img/thumbnail/${item.slug}.jpg?vuetify-preload`)"
       aspect-ratio="2"
       )
       template(v-slot:placeholder)
