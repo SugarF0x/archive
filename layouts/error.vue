@@ -8,7 +8,7 @@
       h1.display-3 {{ error.statusCode }}
       v-card-text
         h3 {{ error.message }}
-        p.text-left.mt-5.pa-2.secondary.white--text(v-if="error.config") {{ error.config }}
+        code.text-left.mt-5.pa-2(v-if="error.config") {{ error.config }}
       v-card-actions.actions
         v-btn(
           nuxt
@@ -33,8 +33,6 @@
 </template>
 
 <script lang="ts">
-// TODO: change error code block into native vuetify code block
-
 import Vue from 'vue';
 
 export default Vue.extend({
