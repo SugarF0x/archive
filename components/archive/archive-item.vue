@@ -4,6 +4,16 @@
       :src="item.thumbnail"
       aspect-ratio="2"
       )
+      template(v-slot:placeholder)
+        v-row(
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        )
+          v-progress-circular(
+            indeterminate
+            color="grey lighten-5"
+            )
       v-scroll-x-reverse-transition(origin="top right 0")
         v-hover(v-slot="{ hover }")
           v-card.chip(

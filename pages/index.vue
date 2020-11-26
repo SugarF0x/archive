@@ -44,7 +44,6 @@
 
 <script lang="ts">
 // TODO: add creating & termination dates for projects
-// TODO: add image loaders
 
 import Vue from 'vue';
 import { IItem } from '@/components/archive/types';
