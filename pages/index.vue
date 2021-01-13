@@ -39,19 +39,19 @@
           v-for="item in sorted"
           :key="item.title"
           )
-          archive-item(:item="item")
+          ArchiveItem(:item="item")
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import { IItem } from '@/components/archive/types';
 
-import archiveItem from '@/components/archive/archive-item.vue';
+import ArchiveItem from '~/components/archive/ArchiveItem.vue';
 
 export default Vue.extend({
   name: 'home',
   components: {
-    'archive-item': archiveItem
+    ArchiveItem
   },
   data() {
     return {

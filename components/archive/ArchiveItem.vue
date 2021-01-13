@@ -56,7 +56,7 @@
 import Vue from 'vue';
 import { IItem } from './types';
 
-import StackIcon from '@/components/stack/stack-icon.vue';
+import StackIcon from '~/components/stack/StackIcon.vue';
 
 export default Vue.extend({
   name: "archive-item",

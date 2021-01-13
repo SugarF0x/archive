@@ -22,7 +22,7 @@
                 v-card-text
                   ul
                     li(v-for="n in page.stack")
-                      stack-icon(
+                      StackIcon(
                         :item="n"
                         name
                         )
@@ -72,12 +72,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import StackIcon from '@/components/stack/stack-icon.vue'
+import StackIcon from '~/components/stack/StackIcon.vue'
 
 export default Vue.extend({
   name: 'description-slug',
   components: {
-    'stack-icon': StackIcon
+    StackIcon
   },
   data() {
     return {
