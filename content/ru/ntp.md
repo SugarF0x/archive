@@ -5,6 +5,7 @@ stack: ['nuxt', 'vuetify', 'ts']
 git: https://github.com/SugarF0x/ntp-help
 link: https://ntp.sugarfox.ru
 life: 25 Декабря 2020 - 13 Января 2021
+compareHeader: true
 ---
 Перепись уже существующего сайта с рядом минималистичных стилистических изменений по условиям клиента.
 <!--more-->

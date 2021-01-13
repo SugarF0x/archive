@@ -49,7 +49,13 @@
           v-row
             v-col(cols="12")
               v-card
+                ImageComparison(
+                  v-if="page.compareHeader"
+                  :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`).src"
+                  :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`).src"
+                )
                 v-img(
+                  v-else
                   :src="require(`~/assets/img/header/${page.slug}.jpg?vuetify-preload`)"
                   aspect-ratio="2"
                   )
@@ -73,11 +79,13 @@
 <script lang="ts">
 import Vue from 'vue';
 import StackIcon from '~/components/stack/StackIcon.vue'
+import ImageComparison from '~/components/ImageComparison.vue'
 
 export default Vue.extend({
   name: 'description-slug',
   components: {
-    StackIcon
+    StackIcon,
+    ImageComparison
   },
   data() {
     return {

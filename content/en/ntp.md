@@ -5,6 +5,7 @@ stack: ['nuxt', 'vuetify', 'ts']
 git: https://github.com/SugarF0x/ntp-help
 link: https://ntp.sugarfox.ru
 life: 25 December 2020 - 13 January 2021
+compareHeader: true
 ---
 A complete rewrite of an existing site with minimalistic style changes under client's supervision.
 <!--more-->
