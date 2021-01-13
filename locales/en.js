@@ -11,6 +11,7 @@ module.exports = {
   "status.active": "active",
   "status.stagnant": "stagnant",
   "status.archived": "archived",
+  "status.supported": "supported",
 
   "home.splash.title": "Welcome to Sugar Archives.",
   "home.splash.p.1": "Here you will find all the projects I have been working on in the past, maintain now or keep working in the present.",

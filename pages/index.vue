@@ -62,13 +62,15 @@ export default Vue.extend({
     /**
      * Sort projects by their status:
      * 1. Active
-     * 2. Stagnant
-     * 3. Archived
+     * 2. Supported
+     * 3. Stagnant
+     * 4. Archived
      */
     sorted(): IItem[] {
       return this.projects.sort((a, b) => {
         const priority = [
           'active',
+          'supported',
           'stagnant',
           'archived'
         ]

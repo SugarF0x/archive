@@ -1,5 +1,5 @@
 ---
-status: archived
+status: supported
 title: НТП Деловые консультации
 stack: ['nuxt', 'vuetify', 'ts']
 git: https://github.com/SugarF0x/ntp-help

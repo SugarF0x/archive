@@ -73,6 +73,8 @@ export default Vue.extend({
           return 'green'
         case 'stagnant':
           return 'orange'
+        case 'supported':
+          return 'blue'
         case 'archived':
           return 'red'
         default:

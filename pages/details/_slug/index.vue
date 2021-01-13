@@ -102,6 +102,8 @@ export default Vue.extend({
           return 'orange'
         case 'archived':
           return 'red'
+        case 'supported':
+          return 'blue'
         default:
           return 'primary'
       }
