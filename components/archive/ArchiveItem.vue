@@ -35,9 +35,9 @@
         :key="item.title+icon"
       )
         // rendered icon
-        stack-icon(:item="icon")
+        StackIcon(:item="icon")
         // ghost icon with the tooltip
-        stack-icon.tooltip(
+        StackIcon.tooltip(
           :item="icon"
           tooltip
         )
@@ -59,12 +59,12 @@ import { IItem } from './types';
 import StackIcon from '~/components/stack/StackIcon.vue';
 
 export default Vue.extend({
-  name: "archive-item",
+  name: "ArchiveItem",
   props: {
     item: Object as () => IItem
   },
   components: {
-    'stack-icon': StackIcon
+    StackIcon
   },
   computed: {
     statusColor() {

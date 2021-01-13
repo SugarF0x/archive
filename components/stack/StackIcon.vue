@@ -18,7 +18,7 @@ import Vue from 'vue';
 import { TStack, IStackIcon, stack } from './types'
 
 export default Vue.extend({
-  name: "stack-icon",
+  name: "StackIcon",
   props: {
     item: String as () => TStack,
     name: Boolean,
