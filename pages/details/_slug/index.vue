@@ -50,6 +50,7 @@
             v-col(cols="12")
               v-card
                 ImageComparison(
+                  dark
                   v-if="page.compareHeader"
                   :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`).src"
                   :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`).src"

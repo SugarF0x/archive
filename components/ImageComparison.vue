@@ -60,6 +60,10 @@ export default Vue.extend({
     window.removeEventListener('touchend', this.finishSliding);
   },
   props: {
+    dark: {
+      type: Boolean,
+      default: false
+    },
     leftImage: {
       type: String,
       default: '',
@@ -178,11 +182,14 @@ export default Vue.extend({
       };
     },
     sliderLineStyle() {
-      return { width: `${this.sliderLineWidth}px` };
+      return {
+        width: `${this.sliderLineWidth}px`,
+        background: `${this.dark ? 'black' : 'white'}`
+      };
     },
     sliderHandleStyle() {
       return {
-        border: `${this.sliderLineWidth}px solid white`,
+        border: `${this.sliderLineWidth}px solid ${this.dark ? 'black' : 'white'}`,
         height: `${this.handleSize}px`,
         width: `${this.handleSize}px`,
       };
@@ -190,7 +197,7 @@ export default Vue.extend({
     sliderLeftArrowStyle() {
       return {
         border: `inset ${this.handleSize * 0.15}px rgba(0,0,0,0)`,
-        borderRight: `${this.handleSize * 0.15}px solid white`,
+        borderRight: `${this.handleSize * 0.15}px solid ${this.dark ? 'black' : 'white'}`,
         marginLeft: `-${this.handleSize * 0.25}px`, // for IE11
         marginRight: `${this.handleSize * 0.25}px`,
       };
@@ -198,7 +205,7 @@ export default Vue.extend({
     sliderRightArrowStyle() {
       return {
         border: `inset ${this.handleSize * 0.15}px rgba(0,0,0,0)`,
-        borderLeft: `${this.handleSize * 0.15}px solid white`,
+        borderLeft: `${this.handleSize * 0.15}px solid ${this.dark ? 'black' : 'white'}`,
         marginRight: `-${this.handleSize * 0.25}px`, // for IE11
       };
     },
@@ -254,7 +261,6 @@ export default Vue.extend({
   top: 0;
 
   .line {
-    background: white;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     flex: 0 1 auto;
