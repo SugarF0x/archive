@@ -49,12 +49,15 @@
           v-row
             v-col(cols="12")
               v-card
-                ImageComparison(
-                  dark
+                v-responsive(
                   v-if="page.compareHeader"
-                  :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`).src"
-                  :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`).src"
+                  aspect-ratio="2"
                 )
+                  ImageComparison(
+                    dark
+                    :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`).src"
+                    :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`).src"
+                  )
                 v-img(
                   v-else
                   :src="require(`~/assets/img/header/${page.slug}.jpg?vuetify-preload`)"
