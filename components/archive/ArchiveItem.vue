@@ -120,7 +120,7 @@ export default Vue.extend({
 
 <i18n lang="yaml">
 en:
-  details: "details"
+  details: details
 ru:
-  details: "подробнее"
+  details: подробнее
 </i18n>

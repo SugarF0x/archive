@@ -103,15 +103,15 @@ export default Vue.extend({
 
 <i18n lang="yaml">
 en:
-  home.splash.title: "Welcome to Sugar Archives."
-  home.splash.p.1: "Here you will find all the projects I have been working on in the past, maintain now or keep working in the present."
-  home.splash.p.2: "The project will also contain description of it's functionality as well as history behind it's creation."
-  home.splash.p.3: "Development stack is displayed along the other useful information like snippets."
-  home.splash.p.4: "An active link is provided if one exists."
+  home.splash.title: Welcome to Sugar Archives.
+  home.splash.p.1: Here you will find all the projects I have been working on in the past, maintain now or keep working in the present.
+  home.splash.p.2: The project will also contain description of it's functionality as well as history behind it's creation.
+  home.splash.p.3: Development stack is displayed along the other useful information like snippets.
+  home.splash.p.4: An active link is provided if one exists.
 ru:
-  home.splash.title: "Добро пожаловать в Архивы."
-  home.splash.p.1: "Здесь покоится бо́льшая часть моих проектов, как уже законченных, так и тех, над которыми продолжается активная работа."
-  home.splash.p.2: "В описаниях проектов можно найти как описание их функционала, так и историю их создания."
-  home.splash.p.3: "У каждого проекта приведён краткий набор наиболее важных инструментов использованных при разработке."
-  home.splash.p.4: "Если рабочая ссылка на проект существует, она также будет предоставлена на странице описания проекта."
+  home.splash.title: Добро пожаловать в Архивы.
+  home.splash.p.1: Здесь покоится бо́льшая часть моих проектов, как уже законченных, так и тех, над которыми продолжается активная работа.
+  home.splash.p.2: В описаниях проектов можно найти как описание их функционала, так и историю их создания.
+  home.splash.p.3: У каждого проекта приведён краткий набор наиболее важных инструментов использованных при разработке.
+  home.splash.p.4: Если рабочая ссылка на проект существует, она также будет предоставлена на странице описания проекта.
 </i18n>

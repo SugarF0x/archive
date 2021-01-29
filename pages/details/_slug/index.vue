@@ -130,9 +130,9 @@ h3
 
 <i18n lang="yaml">
 en:
-  link: "link"
-  stack: "stack"
+  link: link
+  stack: stack
 ru:
-  link: "ссылка"
-  stack: "стек"
+  link: ссылка
+  stack: стек
 </i18n>

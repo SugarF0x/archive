@@ -66,11 +66,11 @@ export default Vue.extend({
 
 <i18n lang="yaml">
 en:
-  error.home: "home"
-  error.reload: "reload"
-  error.back: "back"
+  error.home: home
+  error.reload: reload
+  error.back: back
 ru:
-  error.home: "домой"
-  error.reload: "обновить"
-  error.back: "назад"
+  error.home: домой
+  error.reload: обновить
+  error.back: назад
 </i18n>
