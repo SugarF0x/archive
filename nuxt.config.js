@@ -59,6 +59,7 @@ export default {
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
+      silentFallbackWarn: true,
       messages: {
         ...locales
       }
