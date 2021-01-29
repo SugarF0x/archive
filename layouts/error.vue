@@ -3,7 +3,7 @@
     column
     justify-center
     align-center
-    )
+  )
     v-card.d-inline-flex.flex-column.text-center.pa-2
       h1.display-3 {{ error.statusCode }}
       v-card-text
@@ -14,7 +14,7 @@
           nuxt
           :to="localePath('/')"
           color="blue darken-2"
-          )
+        )
           v-icon(left) mdi-home
           | {{ $t("error.home") }}
         v-spacer
@@ -22,13 +22,13 @@
           @click="reload"
           color="blue darken-2"
           v-if="error.statusCode !== 404"
-          ) {{ $t("error.reload") }}
+        ) {{ $t("error.reload") }}
           v-icon(right) mdi-update
         v-btn(
           @click="$router.go(-1)"
           color="blue darken-2"
           v-else
-          ) {{ $t("error.back") }}
+        ) {{ $t("error.back") }}
           v-icon(right) mdi-undo-variant
 </template>
 

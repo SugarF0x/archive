@@ -3,7 +3,7 @@
     v-img.position-relative(
       :src="require(`~/assets/img/thumbnail/${item.slug}.jpg?vuetify-preload`)"
       aspect-ratio="2"
-      )
+    )
       template(v-slot:placeholder)
         v-row(
           class="fill-height ma-0"
@@ -13,14 +13,14 @@
           v-progress-circular(
             indeterminate
             color="grey lighten-5"
-            )
+          )
       v-scroll-x-reverse-transition(origin="top right 0")
         v-hover(v-slot="{ hover }")
           v-card.chip(
             :color="statusColor"
             tile
             :class="hover ? '' : 'foldChip'"
-            ) {{ $t(`status.${item.status}`) }}
+          ) {{ $t(`status.${item.status}`) }}
 
     v-card-title.justify-center {{ item.title }}
 

@@ -3,13 +3,13 @@
     v-col(
       cols="12"
       lg="10"
-      )
+    )
       v-row(justify="center")
         v-col.order-1.order-sm-0.pu-0.pu-sm-1(
           cols="12"
           sm="4"
           xl="3"
-          )
+        )
           v-row()
             v-col(cols="12")
               v-card
@@ -25,27 +25,27 @@
                       StackIcon(
                         :item="n"
                         name
-                        )
+                      )
             v-col(cols="12")
               v-card
                 v-card-actions.d-flex.flex-wrap.justify-space-between
                   v-btn.ma-1(
                     :href="page.git"
                     :disabled="!page.git"
-                    )
+                  )
                     v-icon(left) mdi-github
                     | GitHub
                   v-btn.ma-1(
                     :href="page.link"
                     :disabled="!page.link"
-                    ) {{ $t("link") }}
+                  ) {{ $t("link") }}
                     v-icon(right) mdi-link
 
         v-col.order-0.order-sm-1.pb-0.pb-sm-1(
           cols="12"
           sm="8"
           xl="9"
-          )
+        )
           v-row
             v-col(cols="12")
               v-card
@@ -59,7 +59,7 @@
                   v-else
                   :src="require(`~/assets/img/header/${page.slug}.jpg?vuetify-preload`)"
                   aspect-ratio="2"
-                  )
+                )
                   template(v-slot:placeholder)
                     v-row(
                       class="fill-height ma-0"

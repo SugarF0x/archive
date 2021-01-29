@@ -2,14 +2,14 @@
   v-row(
     justify="center"
     align="center"
-    )
+  )
     v-col(
       cols="11"
       sm="10"
       md="9"
       lg="8"
       xl="6"
-      )
+    )
       v-row
         v-col(cols="12")
           v-card
@@ -26,11 +26,11 @@
           md="4"
           v-for="item in 3"
           :key="item+'skeleton'"
-          )
+        )
           v-skeleton-loader.mx-auto(
             width="100%"
             type="card"
-            )
+          )
       v-row(v-else)
         v-col.d-flex.align-content-stretch(
           cols="12"
@@ -38,7 +38,7 @@
           md="4"
           v-for="item in sorted"
           :key="item.title"
-          )
+        )
           ArchiveItem(:item="item")
 </template>
 
