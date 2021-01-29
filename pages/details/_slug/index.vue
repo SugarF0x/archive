@@ -125,15 +125,11 @@ h3
   margin-bottom: .5rem
 </style>
 
-<i18n>
-{
-  "en": {
-    "link": "link",
-    "stack": "stack"
-  },
-  "ru": {
-    "link": "ссылка",
-    "stack": "стек"
-  }
-}
+<i18n lang="yaml">
+en:
+  link: "link"
+  stack: "stack"
+ru:
+  link: "ссылка"
+  stack: "стек"
 </i18n>

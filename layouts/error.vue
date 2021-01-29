@@ -64,17 +64,13 @@ export default Vue.extend({
     margin-right: 0
 </style>
 
-<i18n>
-{
-  "en": {
-    "error.home": "home",
-    "error.reload": "reload",
-    "error.back": "back"
-  },
-  "ru": {
-    "error.home": "домой",
-    "error.reload": "обновить",
-    "error.back": "назад"
-  }
-}
+<i18n lang="yaml">
+en:
+  error.home: "home"
+  error.reload: "reload"
+  error.back: "back"
+ru:
+  error.home: "домой"
+  error.reload: "обновить"
+  error.back: "назад"
 </i18n>

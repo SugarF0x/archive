@@ -118,13 +118,9 @@ export default Vue.extend({
   transform: skewX(45deg)
 </style>
 
-<i18n>
-{
-  "en": {
-    "details": "details"
-  },
-  "ru": {
-    "details": "подробнее"
-  }
-}
+<i18n lang="yaml">
+en:
+  details: "details"
+ru:
+  details: "подробнее"
 </i18n>
