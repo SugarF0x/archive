@@ -16,19 +16,19 @@
           color="blue darken-2"
           )
           v-icon(left) mdi-home
-          | {{ $t("link.home") }}
+          | {{ $t("error.home") }}
         v-spacer
         v-btn(
           @click="reload"
           color="blue darken-2"
           v-if="error.statusCode !== 404"
-          ) {{ $t("link.reload") }}
+          ) {{ $t("error.reload") }}
           v-icon(right) mdi-update
         v-btn(
           @click="$router.go(-1)"
           color="blue darken-2"
           v-else
-          ) {{ $t("link.back") }}
+          ) {{ $t("error.back") }}
           v-icon(right) mdi-undo-variant
 </template>
 
@@ -63,3 +63,18 @@ export default Vue.extend({
   > *:last-child
     margin-right: 0
 </style>
+
+<i18n>
+{
+  "en": {
+    "error.home": "home",
+    "error.reload": "reload",
+    "error.back": "back"
+  },
+  "ru": {
+    "error.home": "домой",
+    "error.reload": "обновить",
+    "error.back": "назад"
+  }
+}
+</i18n>
