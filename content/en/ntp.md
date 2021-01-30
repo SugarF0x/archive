@@ -3,7 +3,7 @@ status: supported
 title: NTP Business consulting
 stack: ['nuxt', 'vuetify', 'ts']
 git: https://github.com/SugarF0x/ntp-help
-link: https://ntp.sugarfox.ru
+link: https://ntp-help.ru
 life: 25 December 2020 - 13 January 2021
 compareHeader: true
 ---
