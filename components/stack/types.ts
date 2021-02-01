@@ -1,4 +1,5 @@
-export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa' | 'plugin' | 'mongo';
+const STACK_ITEMS = ['html', 'css', 'js', 'ts', 'bootstrap', 'vue', 'konva', 'webpack', 'node', 'nuxt', 'vuetify', 'pwa', 'plugin', 'mongo'] as const
+export type TStack = typeof STACK_ITEMS[number]
 
 /**
  * Supported stack icons
