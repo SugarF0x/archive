@@ -1,4 +1,4 @@
-export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa' | 'plugin';
+export type TStack = 'html' | 'css' | 'js' | 'ts' | 'bootstrap' | 'vue' | 'konva' | 'webpack' | 'node' | 'nuxt' | 'vuetify' | 'pwa' | 'plugin' | 'mongo';
 
 /**
  * Supported stack icons
@@ -77,5 +77,10 @@ export const stack: IStack = {
     name: 'puzzle',
     desc: 'Chrome Extension',
     fill: 'grey'
+  },
+  mongo: {
+    name: 'leaf',
+    desc: 'MongoDB',
+    fill: 'light-green'
   }
 }
