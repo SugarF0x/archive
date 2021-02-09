@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "start": "title Sugar Archives && nuxt-ts start",
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
