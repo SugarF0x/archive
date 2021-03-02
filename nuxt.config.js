@@ -71,7 +71,9 @@ export default {
     treeShake: {
       loaderOptions: {
         progressiveImages: {
-          sharp: true
+          size: 16,
+          sharp: true,
+          resourceQuery: /preload/
         }
       }
     },

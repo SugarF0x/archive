@@ -10,7 +10,7 @@
           sm="4"
           xl="3"
         )
-          v-row()
+          v-row
             v-col(cols="12")
               v-card
                 v-card-title.text-capitalize {{ $t("status") }}:
@@ -31,12 +31,14 @@
                 v-card-actions.d-flex.flex-wrap.justify-space-between
                   v-btn.ma-1(
                     :href="page.git"
+                    target="_blank"
                     :disabled="!page.git"
                   )
                     v-icon(left) mdi-github
                     | GitHub
                   v-btn.ma-1(
                     :href="page.link"
+                    target="_blank"
                     :disabled="!page.link"
                   ) {{ $t("link") }}
                     v-icon(right) mdi-link
@@ -55,12 +57,12 @@
                 )
                   ImageComparison(
                     dark
-                    :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`).src"
-                    :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`).src"
+                    :leftImage="require(`~/assets/img/header/${page.slug}/compare-left.jpg`)"
+                    :rightImage="require(`~/assets/img/header/${page.slug}/compare-right.jpg`)"
                   )
                 v-img(
                   v-else
-                  :src="require(`~/assets/img/header/${page.slug}.jpg?vuetify-preload`)"
+                  :src="require(`~/assets/img/header/${page.slug}.jpg?preload`)"
                   aspect-ratio="2"
                 )
                   template(v-slot:placeholder)
