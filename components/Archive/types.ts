@@ -1,4 +1,4 @@
-import { TStack } from '@/components/stack/types'
+import { TStack } from '@/components/Stack/types'
 
 export interface IItem {
   title: string;

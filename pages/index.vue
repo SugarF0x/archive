@@ -44,15 +44,10 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { IItem } from '@/components/archive/types';
-
-import ArchiveItem from '~/components/archive/ArchiveItem.vue';
+import { IItem } from '@/components/Archive/types';
 
 export default Vue.extend({
   name: 'home',
-  components: {
-    ArchiveItem
-  },
   data() {
     return {
       projects: [] as IItem[]

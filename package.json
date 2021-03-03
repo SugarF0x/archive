@@ -9,20 +9,20 @@
     "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.9.0",
-    "@nuxt/typescript-runtime": "^2.0.0",
-    "core-js": "^3.6.5",
+    "@nuxt/content": "^1.14.0",
+    "@nuxt/typescript-runtime": "^2.0.2",
+    "core-js": "^3.9.1",
     "css-element-queries": "^1.2.3",
-    "nuxt": "^2.14.6",
-    "nuxt-i18n": "^6.15.4"
+    "nuxt": "^2.15.2",
+    "nuxt-i18n": "^6.20.4"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/types": "^2.15.2",
+    "@nuxt/typescript-build": "^2.0.6",
     "@nuxtjs/vuetify": "^1.11.2",
     "js-yaml": "^4.0.0",
-    "pug": "^3.0.0",
-    "pug-plain-loader": "^1.0.0",
-    "sharp": "^0.26.3"
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sharp": "^0.27.2"
   }
 }

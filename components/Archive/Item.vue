@@ -56,15 +56,10 @@
 import Vue from 'vue';
 import { IItem } from './types';
 
-import StackIcon from '~/components/stack/StackIcon.vue';
-
 export default Vue.extend({
   name: "ArchiveItem",
   props: {
     item: Object as () => IItem
-  },
-  components: {
-    StackIcon
   },
   computed: {
     statusColor() {

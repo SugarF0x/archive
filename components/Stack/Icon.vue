@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { TStack, IStackIcon, stack } from './types'
+import Vue from 'vue'
+import { TStack, IStackIcon, stack } from "./types"
 
 export default Vue.extend({
   name: "StackIcon",

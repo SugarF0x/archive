@@ -84,15 +84,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import StackIcon from '~/components/stack/StackIcon.vue'
-import ImageComparison from '~/components/ImageComparison.vue'
 
 export default Vue.extend({
   name: 'description-slug',
-  components: {
-    StackIcon,
-    ImageComparison
-  },
   data() {
     return {
       page: undefined as any
