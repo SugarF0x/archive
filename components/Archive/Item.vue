@@ -28,9 +28,9 @@
     v-row(
       justify="center"
       no-gutters
-    )
-      v-col.d-flex.justify-center(
-        cols="2"
+    ).mx-5
+      v-col.d-flex.justify-center.mb-5(
+        cols="3"
         v-for="icon in item.stack"
         :key="item.title+icon"
       )
@@ -42,7 +42,7 @@
           tooltip
         )
 
-    v-card-text {{ item.description }}
+    v-card-text.pt-0 {{ item.description }}
 
     v-card-actions.actions
       v-btn(
