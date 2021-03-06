@@ -1,4 +1,4 @@
-const STACK_ITEMS = ['html', 'css', 'js', 'ts', 'bootstrap', 'vue', 'konva', 'webpack', 'node', 'nuxt', 'vuetify', 'pwa', 'plugin', 'mongo', 'ocr'] as const
+const STACK_ITEMS = ['html', 'css', 'js', 'ts', 'bootstrap', 'vue', 'konva', 'webpack', 'node', 'nuxt', 'vuetify', 'pwa', 'plugin', 'mongo', 'ocr', 'uppy'] as const
 export type TStack = typeof STACK_ITEMS[number]
 
 /**
@@ -14,6 +14,11 @@ export type IStack = {
 }
 
 export const stack: IStack = {
+  uppy: {
+    name: 'upload',
+    desc: 'Uppy',
+    fill: 'orange'
+  },
   ocr: {
     name: 'text-recognition',
     desc: 'OCR',
