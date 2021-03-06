@@ -21,7 +21,7 @@ export const stack: IStack = {
   },
   ocr: {
     name: 'text-recognition',
-    desc: 'OCR',
+    desc: 'Tesseract',
     fill: 'white'
   },
   html: {
